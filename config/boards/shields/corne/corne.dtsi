@@ -128,11 +128,8 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6)  RC(2,7) RC(2,8) RC(2,9
  * ProMicro/SuperMini nRF52840 clone MCUs (HW-954): the nice_nano board
  * puts REG1 in DC/DC mode, which needs an inductor this clone lot may
  * not have — the 3.3V rail collapses at boot (bootloader OK, app dead).
- * Force REG1 back to LDO mode (the property is required by the
- * binding, so it must be set, not deleted).
+ * Delete the override so REG1 stays in its default LDO mode.
  */
-#include <zephyr/dt-bindings/regulator/nrf5x.h>
-
 &reg1 {
-	regulator-initial-mode = <NRF5X_REG_MODE_LDO>;
+	/delete-property/ regulator-initial-mode;
 };
