@@ -123,13 +123,3 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6)  RC(2,7) RC(2,8) RC(2,9
 		zmk,underglow = &led_strip;
 	};
 };
-
-/*
- * ProMicro/SuperMini nRF52840 clone MCUs (HW-954): the nice_nano board
- * puts REG1 in DC/DC mode, which needs an inductor this clone lot may
- * not have — the 3.3V rail collapses at boot (bootloader OK, app dead).
- * Delete the override so REG1 stays in its default LDO mode.
- */
-&reg1 {
-	/delete-property/ regulator-initial-mode;
-};
