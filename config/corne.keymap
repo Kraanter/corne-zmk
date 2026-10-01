@@ -173,19 +173,28 @@
         base_layer {
             display-name = "BASE";
             bindings = <
-&kp ESCAPE  &kp Q       &kp W       &kp E        &kp R        &kp T  &kp Y  &kp U        &kp I        &kp O       &kp P          &kp BSPC
-&sl 1       &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F  &kp G  &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &hyper
-&kp LSHFT   &kp Z       &kp X       &kp C        &kp V        &kp B  &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH       &mt RIGHT_SHIFT ENTER
-                                    &none        &none        &none  &none  &none        &none
+&kp ESCAPE  &kp Q       &kp W       &kp E         &kp R        &kp T     &kp Y  &kp U        &kp I        &kp O       &kp P          &kp BSPC
+&sl 1       &mt LGUI A  &mt LALT S  &mt LCTRL D   &mt LSHFT F  &kp G     &kp H  &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &hyper
+&kp LSHFT   &kp Z       &kp X       &kp C         &kp V        &kp B     &kp N  &kp M        &kp COMMA    &kp DOT     &kp FSLH       &mt RIGHT_SHIFT ENTER
+                                    &kp LEFT_ALT  &none        &kp LGUI  &none  &none        &none
             >;
         };
 
-        navigation {
+        Navigation {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans  &trans     &trans  &trans
                         &trans  &trans  &trans  &trans    &trans    &trans
+            >;
+        };
+
+        Number {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &kp N1  &kp N2  &kp N3  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp N4  &kp N5  &kp N6  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp N7  &kp N8  &kp N9  &trans  &trans  &trans
+                        &trans  &trans  &trans  &trans  &kp N0  &trans
             >;
         };
     };
